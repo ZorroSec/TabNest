@@ -20,5 +20,5 @@ app.get('/', (req, res)=>{
     //     })
 
     // })
-    res.render('main')
+    res.render('home')
 })
