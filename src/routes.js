@@ -6,9 +6,9 @@ import connection from "../app/connection/tabnest.js";
 app.get('/', (req, res)=>{
     // connection.query("INSERT INTO tabnest.logins(nome,email,senha) VALUES('admin2','admin2@gmail.com','admin1234')")
     Logins.create({
-        nome: "admin2",
-        email: "admin2@gmail.com",
-        senha: "admin1234"
+        nome: "admin3",
+        email: "admin3@gmail.com",
+        senha: "admin1233"
     })
     res.json({
         message: "success"
