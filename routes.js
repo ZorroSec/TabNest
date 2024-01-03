@@ -6,13 +6,13 @@ import connection from "./app/connection/tabnest.js";
 import { engine } from "express-handlebars"
 import bodyParser from "body-parser";
 import express from "express"
-app.engine('handlebars', engine());
-app.set('view engine', 'handlebars');
-app.set('views', './views');
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
-app.use(express.static('../app/public'))
-app.use(express.static('../app/scripts'))
+// app.engine('handlebars', engine());
+// app.set('view engine', 'handlebars');
+// app.set('views', './views');
+// app.use(bodyParser.urlencoded({ extended: false }))
+// app.use(bodyParser.json())
+// app.use(express.static('../app/public'))
+// app.use(express.static('../app/scripts'))
 app.get('/', (req, res)=>{
     // connection.query(`INSERT INTO ${process.env.DBNAME}.logins(nome,email,senha) VALUES('admin2','admin2@gmail.com','admin1234')`, (results, fields)=>{
     //     res.json({
