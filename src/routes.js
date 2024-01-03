@@ -10,4 +10,9 @@ app.get('/', (req, res)=>{
         })
 
     })
+    if(Logins.create({nome: "admin3", email: "admin3@gmail.com", senha: "admin1233" })){
+        res.json({
+            message: 'success'
+        })
+    }
 })
