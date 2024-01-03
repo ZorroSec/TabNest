@@ -1,4 +1,4 @@
-import { Sequelize } from "sequelize";
+const { Sequelize } = require("sequelize")
 
 const sequelize = new Sequelize(process.env.DBNAME, process.env.DBUSER, process.env.DBPASS, {
     dialect: "mysql",
@@ -6,4 +6,4 @@ const sequelize = new Sequelize(process.env.DBNAME, process.env.DBUSER, process.
     port: process.env.DBPORT
 })
 
-export default sequelize
+module.exports = sequelize

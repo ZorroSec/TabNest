@@ -1,9 +1,9 @@
-import "./routes.js"
-import app from "./app/controllers/config.js"
-import express from "express"
-import exbhs from "express-handlebars"
-import bodyParser from "body-parser";
-import path from "path";
+require("./routes.js")
+const app = require("./app/controllers/config.js")
+const express = require("express")
+const exbhs = require("express-handlebars")
+const bodyParser = require("body-parser")
+const path = require("path")
 // app.engine('handlebars', engine());
 // app.set('view engine', 'handlebars');
 // app.set('views', './views/');

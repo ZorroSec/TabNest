@@ -1,5 +1,5 @@
-import sequelize from "../models/db.js";
-import { Sequelize, DataTypes } from "sequelize";
+const sequelize = require("../models/db.js")
+const { Sequelize, DataTypes } = require("sequelize")
 
 const Logins = sequelize.define("logins", {
     id: {
@@ -22,4 +22,4 @@ const Logins = sequelize.define("logins", {
     }
 })
 
-export default Logins
+module.exports = Logins

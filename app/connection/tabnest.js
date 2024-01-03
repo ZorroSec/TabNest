@@ -1,4 +1,4 @@
-import { createConnection } from "mysql2"
+const { createConnection } = require("mysql2")
 
 const connection = createConnection({
     // host: process.env.DBHOST,
@@ -13,4 +13,4 @@ const connection = createConnection({
     database: "bl4brdgk6kjyan7p7h6z"
 })
 
-export default connection
+module.exports = connection

@@ -1,11 +1,8 @@
-import app from "./app/controllers/config.js";
-import sequelize from "./app/models/db.js";
-import { Sequelize, DataTypes } from "sequelize";
-import Logins from "./app/logins/logins.js";
-import connection from "./app/connection/tabnest.js";
-import { engine } from "express-handlebars"
-import bodyParser from "body-parser";
-import express from "express"
+const app = require("./app/controllers/config.js")
+const sequelize = require("./app/models/db.js")
+const { Sequelize, DataTypes } = require("sequelize")
+const Logins = require("./app/logins/logins.js")
+const connection = require("./app/connection/tabnest.js")
 // app.engine('handlebars', engine());
 // app.set('view engine', 'handlebars');
 // app.set('views', './views');
