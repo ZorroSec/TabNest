@@ -7,9 +7,9 @@ const path = require("path")
 // app.engine('handlebars', engine());
 // app.set('view engine', 'handlebars');
 // app.set('views', './views/');
-app.engine('handlebars', exbhs.engine({ defaultLayout: 'main', extname: 'handlebars' }))
+app.engine('handlebars', exbhs.engine({ defaultLayout: 'main', layoutsDir: path.join(__dirname + 'views' + 'layouts') }))
 app.set('view engine', 'handlebars')
-app.set('views', './views')
+app.set('views', path.join(__dirname + 'views'))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(express.static('public'))
