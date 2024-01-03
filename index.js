@@ -1,4 +1,4 @@
-import "./src/routes.js"
+import "./routes.js"
 import app from "./app/controllers/config.js"
 import express from "express"
 import { engine } from "express-handlebars"

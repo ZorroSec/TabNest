@@ -1,8 +1,8 @@
-import app from "../app/controllers/config.js";
-import sequelize from "../app/models/db.js";
+import app from "./app/controllers/config.js";
+import sequelize from "./app/models/db.js";
 import { Sequelize, DataTypes } from "sequelize";
-import Logins from "../app/logins/logins.js";
-import connection from "../app/connection/tabnest.js";
+import Logins from "./app/logins/logins.js";
+import connection from "./app/connection/tabnest.js";
 import { engine } from "express-handlebars"
 import bodyParser from "body-parser";
 import express from "express"
