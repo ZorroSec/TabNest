@@ -1,10 +1,15 @@
 import app from "../app/controllers/config.js";
-// import sequelize from "../app/models/db.js";
-// import { Sequelize, DataTypes } from "sequelize";
-// import Logins from "../app/logins/logins.js";
+import sequelize from "../app/models/db.js";
+import { Sequelize, DataTypes } from "sequelize";
+import Logins from "../app/logins/logins.js";
 import connection from "../app/connection/tabnest.js";
 app.get('/', (req, res)=>{
-    connection.query("INSERT INTO tabnest.logins(nome,email,senha) VALUES('admin2','admin2@gmail.com','admin1234')")
+    // connection.query("INSERT INTO tabnest.logins(nome,email,senha) VALUES('admin2','admin2@gmail.com','admin1234')")
+    Logins.create({
+        nome: "admin2",
+        email: "admin2@gmail.com",
+        senha: "admin1234"
+    })
     res.json({
         message: "success"
     })
