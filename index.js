@@ -7,9 +7,7 @@ import path from "path";
 // app.engine('handlebars', engine());
 // app.set('view engine', 'handlebars');
 // app.set('views', './views/');
-app.engine('handlebars', exbhs.engine({
-    defaultLayout: 'main'
-}))
+app.engine('handlebars', exbhs.engine({ defaultLayout: 'main', extname: 'handlebars' }))
 app.set('view engine', 'handlebars')
 app.set('views', './views')
 app.use(bodyParser.urlencoded({ extended: false }))
