@@ -9,5 +9,5 @@ app.set('views', './views');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(express.static('app/public'))
-
+app.use(express.static('app/scripts'))
 app.listen(4000, ()=>{console.log({ message: 'Success' })})
