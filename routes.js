@@ -21,19 +21,19 @@ app.get('/', (req, res)=>{
     res.render('home')
 })
 app.get('/tests', (req, res)=>{
-    connection.query(`INSERT INTO railway.logins(nome,email,senha) VALUES('admin2','admin2@gmail.com','admin1234')`, (results, fields)=>{
-        res.json({
-            message: "success",
-            fields: fields
+    // connection.query(`INSERT INTO railway.logins(nome,email,senha) VALUES('admin2','admin2@gmail.com','admin1234')`, (results, fields)=>{
+    //     res.json({
+    //         message: "success",
+    //         fields: fields
             
-        })
+    //     })
+    // })
+    Logins.create({
+        nome: "Test1",
+        email: "tes@email.com",
+        senha: "1234"
     })
-    // Logins.create({
-    //     nome: "Test1",
-    //     email: "tes@email.com",
-    //     senha: "1234"
-    // })
-    // res.json({
-    //     message: "success"
-    // })
+    res.json({
+        message: "success"
+    })
 })
