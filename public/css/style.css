@@ -49,3 +49,14 @@ header.header div.links div.link a{
     color: white;
     text-decoration: none;
 }
+div.conteiner__posts{
+    width: 68%;
+    margin: auto;
+    color: white;
+}
+div.conteiner__post{
+    margin-top: 1em;
+}
+hr{
+    opacity: 0.3;
+}
