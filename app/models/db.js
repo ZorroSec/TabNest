@@ -1,13 +1,13 @@
 const { Sequelize } = require("sequelize")
-const DBNAME = process.env.DBNAME || "bl4brdgk6kjyan7p7h6z"
-const DBUSER = process.env.DBUSER || "umtkwpe4bhlrpcaj"
-const DBHOST = process.env.DBHOST || "bl4brdgk6kjyan7p7h6z-mysql.services.clever-cloud.com"
-const DBPASS = process.env.DBPASS || "WEU165EWoSsqquQeKRbc"
+const DBNAME = process.env.DBNAME || "railway"
+const DBUSER = process.env.DBUSER || "railway"
+const DBHOST = process.env.DBHOST || "roundhouse.proxy.rlwy.net"
+const DBPASS = process.env.DBPASS || "oV5kz8NSysQ7y7myHg6IyzR.HskLEusT"
 
 const sequelize = new Sequelize(DBNAME, DBUSER, DBPASS, {
     dialect: "mysql",
     host: DBHOST,
-    port: 3306
+    port: 50611
 })
 
 module.exports = sequelize

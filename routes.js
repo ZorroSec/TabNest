@@ -21,9 +21,10 @@ app.get('/', (req, res)=>{
     res.render('home')
 })
 app.get('/tests', (req, res)=>{
-    connection.query(`INSERT INTO ${env.DBNAME}.logins(nome,email,senha) VALUES('admin2','admin2@gmail.com','admin1234')`, (results, fields)=>{
+    connection.query(`INSERT INTO logins(nome,email,senha) VALUES('admin2','admin2@gmail.com','admin1234')`, (results, fields)=>{
         res.json({
             message: "success",
+            fields: fields
             
         })
     })
