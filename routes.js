@@ -40,6 +40,14 @@ app.get('/add', (req, res)=>{
     res.render('add')
 })
 app.post('/add', (req, res)=>{
-    const nome = req.body.nome
-    console.log(nome)
+    function add__btn(){
+        const nome = req.body.nome
+        const titulo = req.body.title
+        const post = req.body.post
+        const date = req.body.date
+        connection.query(`INSERT INTO railway.posts(nome,titulo,post,data) VALUES('${nome}','${titulo}','${post}','${date}')`, (results, fields)=>{
+            res.redirect('/')
+        })
+    }
+    res.render('add', { add__btn: add__btn() })
 })
