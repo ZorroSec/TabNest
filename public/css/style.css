@@ -7,3 +7,9 @@
 body{
     background: rgb(13,17,23);
 }
+header.header{
+    background-color: rgb(22,27,34);
+    color: #e6edf3;
+    padding: 1em;
+    box-shadow: 1px 0 3px rgba(255,255,255,0.3);
+}
