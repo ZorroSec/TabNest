@@ -8,11 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     {{!-- <link rel="stylesheet" href="/style.css"> --}}
     <style>
-        *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
 body{
     background: rgb(13,17,23);
@@ -87,6 +88,54 @@ div.informations__post p.username__post{
 div.title__post{
     margin-bottom: 1em;
     font-size: 20px;
+}
+div.add__post__form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+div.add__nome input,
+div.add__title input{
+    width: 100%;
+    border: 1px solid rgb(48, 54, 61);
+    outline: none;
+    background: transparent;
+    border-radius: 10px;
+    padding: 10px 1em;
+    margin-bottom: 10px;
+}
+div.add__post__content textarea{
+    resize: none;
+    border-radius: 10px;
+    border: 1px solid rgb(48, 54, 61);
+    padding: 10px;
+    background: transparent;
+    color: white;
+    margin-bottom: 5px;
+    width: 100%;
+}
+div.options__post{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+div.datetime__post input{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(48, 54, 61);
+    outline: none;
+    padding: 10px 20px;
+    color: white;
+}
+div.submit__post input{
+    background: rgb(31,121,58);
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
 }
     </style>
     <title>TabNest</title>
