@@ -12,13 +12,9 @@ const env = require('./app/env/env.js')
 // app.use(express.static('../app/public'))
 // app.use(express.static('../app/scripts'))
 app.get('/', (req, res)=>{
-    // connection.query(`INSERT INTO ${process.env.DBNAME}.logins(nome,email,senha) VALUES('admin2','admin2@gmail.com','admin1234')`, (results, fields)=>{
-    //     res.json({
-    //         message: "success"
-    //     })
-
-    // })
-    res.render('home')
+    connection.query('SELECT * FROM posts ORDER BY id DESC', (results, fields)=>{
+        res.render('home', { posts: fields })
+    })
 })
 app.get('/tests', (req, res)=>{
     connection.query(`INSERT INTO railway.logins(nome,email,senha) VALUES('admin2','admin2@gmail.com','admin1234')`, (results, fields)=>{
