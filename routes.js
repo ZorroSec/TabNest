@@ -4,6 +4,9 @@ const { Sequelize, DataTypes } = require("sequelize")
 const Logins = require("./app/logins/logins.js")
 const connection = require("./app/connection/tabnest.js")
 const env = require('./app/env/env.js')
+const bodyParser = require('body-parser')
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 // app.engine('handlebars', engine());
 // app.set('view engine', 'handlebars');
 // app.set('views', './views');
@@ -34,11 +37,9 @@ app.get('/tests', (req, res)=>{
     // })
 })
 app.get('/add', (req, res)=>{
-    const datetime = new Date().getTime()
-    connection.query(`INSERT INTO railway.posts(nome,titulo,post,data) VALUES('Jose Cipriano','Lorem ipsum','Hello World','${datetime}')`, (results, fields)=>{
-        res.json({
-            message: "success",
-            fields: fields
-        })
-    })
+    res.render('add')
+})
+app.post('/add', (req, res)=>{
+    const nome = req.body.nome
+    console.log(nome)
 })
