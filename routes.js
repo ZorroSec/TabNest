@@ -3,6 +3,7 @@ const sequelize = require("./app/models/db.js")
 const { Sequelize, DataTypes } = require("sequelize")
 const Logins = require("./app/logins/logins.js")
 const connection = require("./app/connection/tabnest.js")
+const env = require('./app/env/env.js')
 // app.engine('handlebars', engine());
 // app.set('view engine', 'handlebars');
 // app.set('views', './views');
