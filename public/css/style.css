@@ -17,6 +17,7 @@ div.header__options{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1em;
 }
 div.header__search form{
     display: flex;
@@ -37,5 +38,14 @@ div.header__search input[type=submit]{
     border: none;
     outline: none;
     border-radius: 10px;
-
+}
+header.header div.links{
+    display: flex;
+    gap: 1em;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+}
+header.header div.links div.link a{
+    color: white;
+    text-decoration: none;
 }
