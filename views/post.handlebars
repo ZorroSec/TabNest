@@ -45,10 +45,23 @@
         <div class="post__contents">
             {{#each post}}
                 <div class="post__info">
-                    <div class="post__informations">
-                        <div class="username">
-                            <p>{{nome}}</p>
-                        </div>
+                    <div class="informations__post">
+                        <p class="username__post">
+                            {{nome}}
+                        </p>
+                        <i>
+                            {{data}}
+                        </i>
+                    </div>
+                     <div class="title__post">
+                        <h2>
+                            {{titulo}}
+                        </h2>
+                    </div>
+                    <div class="post__main">
+                        <p>
+                            {{post}}
+                        </p>
                     </div>
                 </div>
             {{/each}}
