@@ -53,7 +53,11 @@ app.post('/add', (req, res)=>{
     res.render('add', { add__btn: add__btn() })
 })
 app.get('/post/:nome/:id', (req, res)=>{
+    const nome = req.params.nome
+    const id = req.params.id
     connection.query(`SELECT * FROM railway.posts WHERE id = ${req.params.id}`, (results, fields)=>{
-        res.render('post', { post: fields })
+        connection.query(`SELECT * FROM comentarios WHERE idpost = ${id}`, (res, filds)=>{
+            res.render('post', { post: fields, nomeRoute: nome, idRoute: id, comments: filds })
+        })
     })
 })
