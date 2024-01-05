@@ -176,7 +176,54 @@ ul.ul__font a{
 ul.ul__font a:hover{
     text-decoration: underline rgb(29,116,247);
 }
+div.post__comment{
+    position: absolute;
+    top: 50%;
+    left: 50%;
 
+    transform: translate(-50%, -50%);
+}
+div.user__comment__post input{
+    width: 100%;
+    border: 1px solid rgb(48, 54, 61);
+    outline: none;
+    background: transparent;
+    border-radius: 10px;
+    padding: 10px 1em;
+    margin-bottom: 10px;
+}
+div.commentary textarea{
+    resize: none;
+    border-radius: 10px;
+    border: 1px solid rgb(48, 54, 61);
+    padding: 10px;
+    background: transparent;
+    color: white;
+    margin-bottom: 5px;
+    width: 100%;
+}
+div.options__comment{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+div.datetime input{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(48, 54, 61);
+    outline: none;
+    padding: 10px 20px;
+    color: white;
+}
+div.submit__btn__comment input{
+    border: none;
+    outline: none;
+    background: rgb(31,121,58);
+    color: white;
+    padding: 10px 20px;
+    font-weight: bolder;
+    border-radius: 10px;
+}
     </style>
     <title>TabNest</title>
 </head>
