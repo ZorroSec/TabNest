@@ -61,3 +61,6 @@ app.get('/post/:nome/:id', (req, res)=>{
         })
     })
 })
+app.get('/post/:nome/:id/add/comentario', (req, res)=>{
+    res.render('post/add__comentario')
+})
