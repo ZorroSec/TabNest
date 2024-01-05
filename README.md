@@ -36,3 +36,7 @@ Observação:
 ### Cadastro e login
 No ambiente de desenvolvimento você poderá tanto criar usuarios manualmente, quanto utilizar usuarios como o `super usuario` para ter acesso a opções que um usuario normal nao tem acesso
 
+### Sobre o projeto
+
+- Este projeto tem como inspiraçao o [TabNews](tabnest.com.br). mas nao com todas as opções que o site permite
+- Estou tentando aprimorar cada vez mais o site e chegar mais proximo do projeto original ([TabNews](tabnews.com.br))
