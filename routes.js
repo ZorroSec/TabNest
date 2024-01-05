@@ -45,7 +45,8 @@ app.post('/add', (req, res)=>{
         const titulo = req.body.title
         const post = req.body.post
         const date = req.body.date
-        connection.query(`INSERT INTO railway.posts(nome,titulo,post,data) VALUES('${nome}','${titulo}','${post}','${date}')`, (results, fields)=>{
+        const fonte = req.body.fonte
+        connection.query(`INSERT INTO railway.posts(nome,titulo,post,data,fonte) VALUES('${nome}','${titulo}','${post}','${date}','${fonte}')`, (results, fields)=>{
             console.log(fields)
         })
     }
