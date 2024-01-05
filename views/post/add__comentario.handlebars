@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TabNest</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__options">
+            <div class="logo">
+                <h1>
+                    TabNest
+                </h1>
+            </div>
+            <div class="header__search">
+                <form action="/" method="POST" class="header__search__form">
+                    <div class="search__input">
+                        <input type="search" name="search" id="search" placeholder="Pesquisar...">
+                    </div>
+                    <div class="search__btn__form">
+                        {{!-- <label for="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                            </svg>
+                        </label> --}}
+                        <input type="submit" name="submit" onclick="{{ onclick__search }}">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="links">
+            <div class="link main__route">
+                <a href="/relevantes" class="main__route">Relevantes</a>
+            </div>
+            <div class="link">
+                <a href="/inicio">Inicio</a>
+            </div>
+            <div class="link">
+                <a href="/recentes">Recentes</a>
+            </div>
+        </div>
+    </header>
+    <section class="conteiner">
+        <div class="post__comments">
+            <div class="post__comment">
+                <div class="user__comment__post">
+                    <input type="text" name="nome" id="nome" placeholder="Nome..." required autocomplete="off">
+                </div>
+                <div class="commentarie">
+                    <textarea name="comment" id="comment" autocomplete="off" cols="30" rows="10"></textarea>
+                </div>
+                <div class="options__comment">
+                    <div class="datetimne">
+                        <input type="datetime-local" name="data" id="data" value="Hora não definida">
+                    </div>
+                    <div class="submit__btn__comment">
+                        <input type="submit" value="Comentar" name="submit" onclick="{{ btn__comment }}">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
