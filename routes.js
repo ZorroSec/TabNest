@@ -56,7 +56,7 @@ app.get('/post/:nome/:id', (req, res)=>{
     const nome = req.params.nome
     const id = req.params.id
     connection.query(`SELECT * FROM railway.posts WHERE id = ${req.params.id}`, (results, fields)=>{
-        connection.query(`SELECT * FROM comentarios WHERE idpost = ${id}`, (res, filds)=>{
+        connection.query(`SELECT * FROM comentarios WHERE idpost = ${id}`, (resu, filds)=>{
             res.render('post', { post: fields, nomeRoute: nome, idRoute: id, comments: filds })
         })
     })
