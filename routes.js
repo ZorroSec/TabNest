@@ -62,5 +62,18 @@ app.get('/post/:nome/:id', (req, res)=>{
     })
 })
 app.get('/post/:nome/:id/add/comentario', (req, res)=>{
-    res.render('post/add__comentario')
+    res.render('post/add__comentario', { nome: req.params.nome, id: req.params.id })
+})
+app.post('/post/:nome/:id/add/comentario', (req, res)=>{
+    function btn__comment(){
+        const nome = req.body.nome
+        const idpost = req.params.id
+        const comentario = req.body.comentario
+        const data = req.body.data
+        connection.query(`INSERT INTO railway.comentarios(idpost,nome,comentario,data) VALUES('${idpost}','${nome}','${comentario}','${data}')`, (results, fields)=>{
+            console.log(fields)
+        })
+
+    }
+    res.render('post/add__comentario', { nome: req.params.nome, id: req.params.id, btn__comment: btn__comment() })
 })
