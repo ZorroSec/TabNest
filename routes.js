@@ -41,12 +41,11 @@ app.get('/add', (req, res)=>{
 })
 app.post('/add', (req, res)=>{
     function add__btn(){
-        const nome = req.body.nome
-        const titulo = req.body.title
-        const post = req.body.post
+        const nome = `${req.body.nome}`.replace(' ', '').toLowerCase()
+        const titulo = req.body.title.replace('"', '')
+        const post = req.body.post.replace("'", "")
         const date = req.body.date
         const fonte = req.body.fonte
-        const novoTitulo = titulo.replace('"', '')
         connection.query(`INSERT INTO railway.posts(nome,titulo,post,data,fonte) VALUES("${nome}","${titulo}","${post}","${date}","${fonte}")`, (results, fields)=>{
             console.log(fields)
         })
