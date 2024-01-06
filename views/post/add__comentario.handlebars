@@ -46,14 +46,14 @@
             <div class="post__comment">
                 <form action="/post/{{nome}}/{{id}}/add/comentario" class="post__comment__form" method="POST">
                     <div class="user__comment__post">
-                        <input type="text" name="nome" id="nome" placeholder="Nome..." required autocomplete="off">
+                        <input type="text" name="nome" id="nome" placeholder="Nome..." required>
                     </div>
                     <div class="commentary">
-                        <textarea name="comentario" id="comment" autocomplete="off" cols="30" rows="10"></textarea>
+                        <textarea name="comentario" id="comment" autocomplete="off" cols="30" rows="10" required></textarea>
                     </div>
                     <div class="options__comment">
                         <div class="datetime">
-                            <input type="datetime-local" name="data" id="data" value="Hora não definida">
+                            <input type="datetime-local" name="data" id="data" value="Hora não definida" required>
                         </div>
                         <div class="submit__btn__comment">
                             <input type="submit" value="Comentar" name="submit" onclick="{{ btn__comment }}">
