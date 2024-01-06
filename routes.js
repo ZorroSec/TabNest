@@ -77,3 +77,8 @@ app.post('/post/:nome/:id/add/comentario', (req, res)=>{
     }
     res.render('post/add__comentario', { nome: req.params.nome, id: req.params.id, btn__comment: btn__comment() })
 })
+app.get('/user/:nome', (req, res)=>{
+    connection.query(`SELECT * FROM railway.posts WHERE nome = '${req.params.nome}'`, (results, fields)=>{
+        res.render('user', { user: fields })
+    })
+})
