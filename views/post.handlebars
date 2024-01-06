@@ -46,9 +46,9 @@
             {{#each post}}
                 <div class="post__info">
                     <div class="informations__post">
-                        <p class="username__post">
+                        <a href="/user/{{nome}}" class="username__post">
                             {{nome}}
-                        </p>
+                        </a>
                         <i>
                             {{data}}
                         </i>
@@ -80,6 +80,31 @@
     </section>
     <section class="button__add__comentary">
         <a href="/post/{{nomeRoute}}/{{idRoute}}/add/comentario">Publique um comentario</a>
+    </section>
+    <section class="commentaries">
+        <div class="section__commentaries">
+            {{#each comments}}
+                <div class="commentary">
+                    <div class="informations__commentary">
+                        <strong>
+                            {{id}}
+                        </strong>
+                        <a href="/user/{{nome}}" class="username">
+                            {{nome}}
+                        </a>
+                        <i>
+                            {{data}}
+                        </i>
+                    </div>
+                    <div class="comentario__post">
+                        <i>
+                            {{comentario}}
+                        </i>
+                    </div>
+                </div>
+                <br>
+            {{/each}}
+        </div>
     </section>
 </body>
 </html>
