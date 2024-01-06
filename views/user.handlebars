@@ -41,16 +41,31 @@
             </div>
         </div>
     </header>
+    <br><br>
     <section class="conteiner">
         <div class="user__informations">
             {{#each user}}
                 <div class="user__information">
-                    <a href="/user/{{nome}}" class="username">{{nome}}</a>
+                    <li>
+                        <a href="/user/{{nome}}" class="username">{{nome}}</a>
+                    </li>
                 </div>
                 <div class="posts">
+                    <div class="title__posts">
+                        <h2>Publições</h2>
+                    </div>
                     <div class="user__posts">
                         <div class="post">
-                            {{post}}
+                            <div class="titulo__post">
+                                <h3>
+                                    <strong>
+                                        {{id}}. {{titulo}}
+                                    </strong>
+                                </h3>
+                            </div>
+                            <div class="post__content">
+                                <a href="/post/{{nome}}/{{id}}">{{post}}</a>
+                            </div>
                         </div>
                     </div>
                 </div>
