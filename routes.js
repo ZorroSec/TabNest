@@ -19,6 +19,16 @@ app.get('/', (req, res)=>{
         res.render('home', { posts: fields })
     })
 })
+app.get('/relevantes', (req, res)=>{
+    connection.query('SELECT * FROM posts ORDER BY id DESC', (results, fields)=>{
+        res.render('home', { posts: fields })
+    })
+})
+app.get('/recentes', (req, res)=>{
+    connection.query('SELECT * FROM posts ORDER BY id DESC', (results, fields)=>{
+        res.render('home', { posts: fields })
+    })
+})
 app.get('/tests', (req, res)=>{
     connection.query(`INSERT INTO railway.logins(nome,email,senha) VALUES('admin2','admin2@gmail.com','admin1234')`, (results, fields)=>{
         res.json({
