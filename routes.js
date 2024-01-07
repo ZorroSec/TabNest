@@ -5,6 +5,7 @@ const Logins = require("./app/logins/logins.js")
 const connection = require("./app/connection/tabnest.js")
 const env = require('./app/env/env.js')
 const bodyParser = require('body-parser')
+const wiki = require("wikipedia")
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 // app.engine('handlebars', engine());
@@ -18,6 +19,18 @@ app.get('/', (req, res)=>{
     connection.query('SELECT * FROM posts ORDER BY id DESC', (results, fields)=>{
         res.render('home', { posts: fields })
     })
+})
+app.post('/search', async (req, res)=>{
+    try{
+        const searchResults = await wiki.search(`${req.body.search}`)
+        console.log(searchResults)
+    } catch(error){
+        console.log(erorr)
+    }
+    res.send('<script>alert("Esta pagina não está em funcionamento ainda, volte para a pagina inicial")</script>')
+})
+app.get('/search', (req, res)=>{
+    res.redirect('/')
 })
 app.get('/relevantes', (req, res)=>{
     connection.query('SELECT * FROM posts ORDER BY id DESC', (results, fields)=>{
